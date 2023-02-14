@@ -8,8 +8,13 @@ let errorShow = document.querySelector(".errorShow");
 let mainArray = [];
 if (localStorage.getItem("newUser") != null) {
   mainArray = JSON.parse(localStorage.getItem("newUser"));
+} else {
+  logInBtn.addEventListener("click", () => {
+    if (logInEmail.value != "" && logInPassword.value != "") {
+      errorShow.innerHTML = "Email not found";
+    }
+  });
 }
-
 // main function
 logInBtn.addEventListener("click", () => {
   let myArray = [];
