@@ -27,7 +27,7 @@ logInBtn.addEventListener("click", () => {
       ) {
         localStorage.setItem("finalName", mainArray[i].objName);
         localStorage.setItem("isLogin", "true");
-        location.href = "../pages/main.html";
+        location.href = "./pages/main.html";
       } else {
         errorShow.style.display = "block";
         if (mainArray[i].objEmail == myArray[0].logInEmail) {
