@@ -1,0 +1,109 @@
+$mainColor: #24353f;
+$secondaryColor: #17a2b8;
+$blackColor: #000;
+$whiteColor: #fff;
+
+::selection {
+  background-color: $secondaryColor;
+  color: $whiteColor;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $whiteColor;
+}
+::-webkit-scrollbar-track {
+  background-color: $blackColor;
+}
+
+body {
+  background-color: $mainColor;
+}
+
+#main {
+  width: 75%;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  @media (max-width: 991px) {
+    width: 100%;
+  }
+  .container {
+    .form {
+      text-align: center;
+      box-shadow: 0 0 50px #00000080;
+      padding: 3rem;
+      @media (max-width: 567px) {
+        padding: 1rem;
+      }
+      h1 {
+        color: $secondaryColor;
+      }
+      .form-controlX {
+        background-color: transparent;
+        color: $whiteColor;
+        border: 1px solid $whiteColor;
+        margin: 10px 0;
+        width: 100%;
+        outline: none;
+        transition: 0.5s;
+        padding: 10px;
+        &:focus {
+          border: 1px solid $secondaryColor;
+        }
+      }
+      .errorShow {
+        display: none;
+        margin: 10px 0;
+        text-align: start;
+      }
+      a {
+        user-select: none;
+        text-decoration: none;
+        cursor: pointer;
+        .loginBtn,
+        .signUpBtn {
+          width: 100%;
+          border: 2px solid $secondaryColor;
+          background: transparent;
+          padding: 5px;
+          color: $secondaryColor;
+          transition: 0.5s;
+          margin: 15px 0;
+          &:hover {
+            border: 2px solid $secondaryColor;
+            background-color: $secondaryColor;
+            color: $whiteColor;
+          }
+        }
+      }
+      .toRegistration {
+        &,
+        a {
+          color: $whiteColor;
+        }
+        a {
+          text-decoration: none;
+          transition: 0.5s;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+.allIcon {
+  .icon {
+    position: absolute;
+    top: 50%;
+    color: #fff;
+    transform: translateY(-50%);
+    right: 10px;
+    cursor: pointer;
+  }
+}

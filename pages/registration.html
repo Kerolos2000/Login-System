@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="registration">
+  <link rel="shortcut icon" href="../img/right-to-bracket-solid.svg">
+  <title>registration</title>
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+  <!-- main css file -->
+  <link rel="stylesheet" href="../css/main.css" />
+</head>
+
+<body class="custom-scrollbar" id="registration">
+
+  <!-- main section -->
+  <section id="main">
+    <div class="container">
+      <div class="form">
+        <h1>Smart Login System</h1>
+        <input type="text" id="signUpName" class="form-controlX form-controlSignUp" placeholder="Enter your name">
+        <p class="errorShow text-danger" id="signUpError"></p>
+        <input type="email" id="signUpEmail" class="form-controlX form-controlSignUp" placeholder="Enter your email">
+        <p class="errorShow text-danger" id="signUpError"></p>
+        <div class="allIcon position-relative">
+          <div class="icon">
+            <i id="icon" class="fa-solid fa-eye"></i>
+          </div>
+          <input type="password" id="signUpPassword" class="form-controlX form-controlSignUp"
+            placeholder="Enter your password">
+          </div>
+          <p class="errorShow text-danger" id="signUpError"></p>
+        <a id="signUpBtn">
+          <div class="signUpBtn">
+            Sign Up
+          </div>
+        </a>
+        <p class="toRegistration">You have an account? <a href="../index.html">Signin</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- bootstrap js -->
+  <script src="../js/bootstrap.js"></script>
+  <!-- fontawesome -->
+  <script src="../js/all.min.js"></script>
+  <!-- main js file -->
+  <script src="../js/myJsFile/registration.js"></script>
+</body>
+
+</html>
+
+
+
+<!-- 
+
+  // global variables
+let logInEmail = document.querySelector("#logInEmail");
+let logInPassword = document.querySelector("#logInPassword");
+let logInBtn = document.querySelector("#logInBtn");
+let errorShow = document.querySelector(".errorShow");
+
+// check if localStorage not empty
+let mainArray = [];
+if (localStorage.getItem("newUser") != null) {
+  mainArray = JSON.parse(localStorage.getItem("newUser"));
+}
+
+// main function
+logInBtn.addEventListener("click", () => {
+  let myArray = [];
+  let myObject = {};
+  if (logInEmail.value != "" && logInPassword.value != "") {
+    myObject = {
+      logInEmail: logInEmail.value,
+      logInUserPassword: logInPassword.value,
+    };
+    myArray.push(myObject);
+    for (let i = 0; i < mainArray.length; i++) {
+      if (
+        mainArray[i].objEmail == myObject.logInEmail &&
+        mainArray[i].objUserPassword == myObject.logInUserPassword
+      ) {
+        localStorage.setItem("finalName", mainArray[i].objName);
+        localStorage.setItem("isLogin", "true");
+        location.href = "../pages/main.html";
+      } else {
+        errorShow.style.display = "block";
+        if (mainArray[i].objEmail == myObject.logInEmail) {
+          errorShow.innerHTML = "Wrong password";
+        } else {
+          errorShow.innerHTML = "Email not found";
+        }
+      }
+    }
+  } else {
+    errorShow.style.display = "block";
+    errorShow.innerHTML = "All inputs are required";
+  }
+});
+
+// eye icon function
+let icon = document.querySelector(".icon");
+icon.addEventListener("click", () => {
+  if (logInPassword.type === "password") {
+    logInPassword.type = "text";
+    icon.innerHTML = '<i class="fas fa-eye-slash"></i>';
+  } else {
+    logInPassword.type = "password";
+    icon.innerHTML = '<i class="fa-solid fa-eye"></i>';
+  }
+});
+
+// if user click enter invoke main function
+document.body.addEventListener("keyup", (e) => {
+  if(e.key == "Enter"){
+    logInBtn.click()
+  }
+})
+ -->

@@ -1,0 +1,112 @@
+::-moz-selection {
+  background-color: #17a2b8;
+  color: #fff;
+}
+
+::selection {
+  background-color: #17a2b8;
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000;
+}
+
+body {
+  background-color: #24353f;
+}
+
+#main {
+  width: 75%;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 991px) {
+  #main {
+    width: 100%;
+  }
+}
+#main .container .form {
+  text-align: center;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5019607843);
+  padding: 3rem;
+}
+@media (max-width: 567px) {
+  #main .container .form {
+    padding: 1rem;
+  }
+}
+#main .container .form h1 {
+  color: #17a2b8;
+}
+#main .container .form .form-controlX {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  margin: 10px 0;
+  width: 100%;
+  outline: none;
+  transition: 0.5s;
+  padding: 10px;
+}
+#main .container .form .form-controlX:focus {
+  border: 1px solid #17a2b8;
+}
+#main .container .form .errorShow {
+  display: none;
+  margin: 10px 0;
+  text-align: start;
+}
+#main .container .form a {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+#main .container .form a .loginBtn,
+#main .container .form a .signUpBtn {
+  width: 100%;
+  border: 2px solid #17a2b8;
+  background: transparent;
+  padding: 5px;
+  color: #17a2b8;
+  transition: 0.5s;
+  margin: 15px 0;
+}
+#main .container .form a .loginBtn:hover,
+#main .container .form a .signUpBtn:hover {
+  border: 2px solid #17a2b8;
+  background-color: #17a2b8;
+  color: #fff;
+}
+#main .container .form .toRegistration,
+#main .container .form .toRegistration a {
+  color: #fff;
+}
+#main .container .form .toRegistration a {
+  text-decoration: none;
+  transition: 0.5s;
+}
+#main .container .form .toRegistration a:hover {
+  text-decoration: underline;
+}
+
+.allIcon .icon {
+  position: absolute;
+  top: 50%;
+  color: #fff;
+  transform: translateY(-50%);
+  right: 10px;
+  cursor: pointer;
+}/*# sourceMappingURL=main.css.map */
